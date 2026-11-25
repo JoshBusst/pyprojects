@@ -1,6 +1,6 @@
 # Python Code Folding
 
-A Visual Studio Code extension for quickly generating new Python projects from a directory of templates. Users can freely curate project templates and recreate these in a static, editable projects directory.
+A Visual Studio Code extension for quickly generating new Python projects from a directory of templates.
 
 ## Features
 
