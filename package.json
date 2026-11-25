@@ -1,0 +1,79 @@
+{
+  "name": "pyprojects",
+  "displayName": "pyprojects",
+  "description": "A VSCode extension for project templating and fast project setup.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.146.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Pyprojects Configuration",
+      "properties": {
+        "pyprojects.templatesDirectory": {
+          "type": "string",
+          "default": "C:/pyprojects/templates",
+          "description": "Global path to the project templates directory."
+        },
+        "pyprojects.projectsDirectory": {
+          "type": "string",
+          "default": "C:/pyprojects/projects",
+          "description": "Global path to the projects directory."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "pyprojects.create",
+        "title": "Pyprojects: Create new template."
+      },
+      {
+        "command": "pyprojects.getTemplatesDirectory",
+        "title": "Pyprojects: Get templates directory."
+      },
+      {
+        "command": "pyprojects.setTemplatesDirectory",
+        "title": "Pyprojects: Set templates directory."
+      },
+      {
+        "command": "pyprojects.getProjectsDirectory",
+        "title": "Pyprojects: Get projects directory."
+      },
+      {
+        "command": "pyprojects.setProjectsDirectory",
+        "title": "Pyprojects: Set projects directory."
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.146.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoshBusst/pyprojects.git"
+  }
+}
